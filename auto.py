@@ -6,3 +6,6 @@ class Vehicle:
             self.price = price
         def display_info(self):
               print(f"Make: {self.make},Model: {self.model},Year: {self.year},Price: {self.price}")
+
+a=Vehicle("ko?","top","1488","shawel",)
+a.display_info()
