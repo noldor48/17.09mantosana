@@ -1,4 +1,5 @@
 class Vehicle:
+        total=0
         def __init__(self, make, model, year, price):
             self.make = make
             self.model = model
@@ -6,6 +7,10 @@ class Vehicle:
             self.price = price
         def display_info(self):
               print(f"Make: {self.make},Model: {self.model},Year: {self.year},Price: {self.price}")
+        def total_vehicles(self):
+              Vehicle.total+=self.price
+              print(f"Auto cena ir {Vehicle.total}")
+              return Vehicle.total
 
 class Car(Vehicle):
         def __init__(self, make, model, year, price, num_doors, body_style):
@@ -22,9 +27,12 @@ class Truck(Vehicle):
             self.towing_capasity = towing_capasity
         def display_info(self):
             print(f"Make: {self.make},Model: {self.model},Year: {self.year},Price: {self.price},bed_lenght: {self.bed_lenght},towing_capasity: {self.towing_capasity}")  
-a=Vehicle("ko?","top","1488","shawel",)
+a=Vehicle("ko?","top","1488",12)
 a.display_info()
-c=Car("ko?","top","1488","shawel","4","nice")
+a.total_vehicles()
+c=Car("ko?","top","1488",12,"4","nice")
 c.display_info()
-t=Car("ko?","top","1488","shawel","6m","much")
+c.total_vehicles()
+t=Car("ko?","top","1488",12,"6m","much")
 t.display_info()
+t.total_vehicles()
