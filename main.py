@@ -1,10 +1,11 @@
-class Genom:
-    name="Genom"
+class Geom:
+    name="Geom"
 
-class Line:
+class Line(Geom):
     def draf(self):
         print("Linijas zimesana")
 
 g=Genom()
 l=Line()
 l.draw()
+print(l.name)
